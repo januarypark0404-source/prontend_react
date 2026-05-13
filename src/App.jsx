@@ -4,118 +4,98 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
+const scores = [ 
+  {  이름: "John", 국어: 90, 영어: 90,  수학: 80, 과학: 90 },
+  {  이름: "Peter", 국어: 90, 영어: 90,  수학: 80, 과학: 90 },
+  {  이름: "Susan", 국어: 90, 영어: 90,  수학: 80, 과학: 90 },
+  {  이름: "Sue", 국어: 90, 영어: 90,  수학: 80, 과학: 90 },
+]
+
+
+
+
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+    
+    <table>
+    
+      <tr>
+        <th>이름</th>
+        <th>국어</th>
+        <th>영어</th>
+        <th>수학</th>
+        <th>과학</th>
+      </tr>
+      {[0, 1, 2, 3].map(idx => 
+            (     
+             <tr>
+              <td>{scores[idx].이름}</td>
+              <td>{scores[idx].국어}</td>
+              <td>{scores[idx].영어}</td>
+              <td>{scores[idx].수학}</td>
+              <td>{scores[idx].과학}</td>
+            </tr>
+            )
+        )
+      }
+      
+    </table>
+  )
+}
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+export default App
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+import './App.css'
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+const scores = [ 
+  {  이름: "John", 국어: 90, 영어: 90,  수학: 80, 과학: 90 },
+  {  이름: "Peter", 국어: 90, 영어: 90,  수학: 80, 과학: 90 },
+  {  이름: "Susan", 국어: 90, 영어: 90,  수학: 80, 과학: 90 },
+  {  이름: "Sue", 국어: 90, 영어: 90,  수학: 80, 과학: 90 },
+]
+
+const sources = [0, 1, 2, 3]
+tmp = []
+for (let item of source){
+  tmp.push(item*2)
+}
+
+sources.map(item=>(item*2))
+
+
+function App() {
+ 
+  return (
+
+    
+    <table>
+    
+      <tr>
+        <th>이름</th>
+        <th>국어</th>
+        <th>영어</th>
+        <th>수학</th>
+        <th>과학</th>
+      </tr>
+      {[0, 1, 2, 3].map(idx => 
+            (     
+             <tr>
+              <td>{scores[idx].이름}</td>
+              <td>{scores[idx].국어}</td>
+              <td>{scores[idx].영어}</td>
+              <td>{scores[idx].수학}</td>
+              <td>{scores[idx].과학}</td>
+            </tr>
+            )
+        )
+      }
+      
+    </table>
   )
 }
 
